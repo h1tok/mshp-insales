@@ -1,0 +1,1736 @@
+.ipolnamespace .mCustomScrollbar {
+  -ms-touch-action: pinch-zoom;
+  touch-action: pinch-zoom;
+}
+.ipolnamespace .mCustomScrollbar.mCS_no_scrollbar,
+.ipolnamespace .mCustomScrollbar.mCS_touch_action {
+  -ms-touch-action: auto;
+  touch-action: auto;
+}
+.ipolnamespace .mCustomScrollBox {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  max-width: 100%;
+  outline: 0;
+  direction: ltr;
+}
+.ipolnamespace .mCSB_container {
+  overflow: hidden;
+  width: auto;
+  height: auto;
+}
+.ipolnamespace .mCSB_inside > .mCSB_container {
+  margin-right: 10px;
+}
+.ipolnamespace .mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden {
+  margin-right: 0;
+}
+.ipolnamespace .mCS-dir-rtl > .mCSB_inside > .mCSB_container {
+  margin-right: 0;
+  margin-left: 10px;
+}
+.ipolnamespace .mCS-dir-rtl > .mCSB_inside > .mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden {
+  margin-left: 0;
+}
+.ipolnamespace .mCSB_scrollTools {
+  position: absolute;
+  width: 16px;
+  height: auto;
+  left: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: .75;
+  filter: "alpha(opacity=75)";
+  -ms-filter: "alpha(opacity=75)";
+}
+.ipolnamespace_fake_block1{
+  height: 100%;
+}
+.ipolnamespace .mCSB_outside + .mCSB_scrollTools {
+  right: -26px;
+}
+.ipolnamespace .mCS-dir-rtl > .mCSB_inside > .mCSB_scrollTools,
+.ipolnamespace .mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools {
+  right: auto;
+  left: 0;
+}
+.ipolnamespace .mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools {
+  left: -26px;
+}
+.ipolnamespace .mCSB_scrollTools .mCSB_draggerContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: auto;
+}
+.ipolnamespace .mCSB_scrollTools a + .mCSB_draggerContainer {
+  margin: 20px 0;
+}
+.ipolnamespace .mCSB_scrollTools .mCSB_draggerRail {
+  width: 2px;
+  height: 100%;
+  margin: 0 auto;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+}
+.ipolnamespace .mCSB_scrollTools .mCSB_dragger {
+  cursor: pointer;
+  width: 100%;
+  height: 30px;
+  z-index: 1;
+}
+.ipolnamespace .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  position: relative;
+  width: 4px;
+  height: 100%;
+  margin: 0 auto;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+  text-align: center;
+}
+.ipolnamespace .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
+.ipolnamespace .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar {
+  width: 12px;
+}
+.ipolnamespace .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.ipolnamespace .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+  width: 8px;
+}
+.ipolnamespace .mCSB_scrollTools .mCSB_buttonDown,
+.ipolnamespace .mCSB_scrollTools .mCSB_buttonUp {
+  display: block;
+  position: absolute;
+  height: 20px;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.ipolnamespace .mCSB_scrollTools .mCSB_buttonDown {
+  bottom: 0;
+}
+.ipolnamespace .mCSB_horizontal.mCSB_inside > .mCSB_container {
+  margin-right: 0;
+  margin-bottom: 30px;
+}
+.ipolnamespace .mCSB_horizontal.mCSB_outside > .mCSB_container {
+  min-height: 100%;
+}
+.ipolnamespace .mCSB_horizontal > .mCSB_container.mCS_no_scrollbar_x.mCS_x_hidden {
+  margin-bottom: 0;
+}
+.ipolnamespace .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+  width: auto;
+  height: 16px;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.ipolnamespace .mCustomScrollBox + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal,
+.ipolnamespace .mCustomScrollBox + .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+  bottom: -26px;
+}
+.ipolnamespace .mCSB_scrollTools.mCSB_scrollTools_horizontal a + .mCSB_draggerContainer {
+  margin: 0 20px;
+}
+.ipolnamespace .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  width: 100%;
+  height: 2px;
+  margin: 7px 0;
+}
+.ipolnamespace .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger {
+  width: 30px;
+  height: 100%;
+  left: 0;
+}
+.ipolnamespace .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  width: 100%;
+  height: 4px;
+  margin: 6px auto;
+}
+.ipolnamespace .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
+.ipolnamespace .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar {
+  height: 12px;
+  margin: 2px auto;
+}
+.ipolnamespace .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.ipolnamespace .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+  height: 8px;
+  margin: 4px 0;
+}
+.ipolnamespace .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft,
+.ipolnamespace .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight {
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.ipolnamespace .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft {
+  left: 0;
+}
+.ipolnamespace .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight {
+  right: 0;
+}
+.ipolnamespace .mCSB_container_wrapper {
+  position: absolute;
+  height: auto;
+  width: auto;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.ipolnamespace .mCSB_container_wrapper > .mCSB_container {
+  padding-right: 30px;
+  padding-bottom: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ipolnamespace .mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_vertical {
+  bottom: 20px;
+}
+.ipolnamespace .mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+  right: 20px;
+}
+.ipolnamespace .mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden + .mCSB_scrollTools.mCSB_scrollTools_vertical {
+  bottom: 0;
+}
+.ipolnamespace .mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_scrollTools.mCSB_scrollTools_horizontal,
+.ipolnamespace .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden + .mCSB_scrollTools ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+  right: 0;
+}
+.ipolnamespace .mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+  left: 20px;
+}
+.ipolnamespace .mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden + .mCSB_scrollTools ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+  left: 0;
+}
+.ipolnamespace .mCS-dir-rtl > .mCSB_inside > .mCSB_container_wrapper {
+  margin-right: 0;
+  margin-left: 30px;
+}
+.ipolnamespace .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden > .mCSB_container {
+  padding-right: 0;
+}
+.ipolnamespace .mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden > .mCSB_container {
+  padding-bottom: 0;
+}
+.ipolnamespace .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden {
+  margin-right: 0;
+  margin-left: 0;
+}
+.ipolnamespace .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden {
+  margin-bottom: 0;
+}
+.ipolnamespace .mCSB_scrollTools,
+.ipolnamespace .mCSB_scrollTools .mCSB_buttonDown,
+.ipolnamespace .mCSB_scrollTools .mCSB_buttonLeft,
+.ipolnamespace .mCSB_scrollTools .mCSB_buttonRight,
+.ipolnamespace .mCSB_scrollTools .mCSB_buttonUp,
+.ipolnamespace .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  -webkit-transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.ipolnamespace .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail,
+.ipolnamespace .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar,
+.ipolnamespace .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail,
+.ipolnamespace .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar {
+  -webkit-transition: width 0.2s ease-out 0.2s, height 0.2s ease-out 0.2s, margin-left 0.2s ease-out 0.2s, margin-right 0.2s ease-out 0.2s, margin-top 0.2s ease-out 0.2s, margin-bottom 0.2s ease-out 0.2s, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  -moz-transition: width 0.2s ease-out 0.2s, height 0.2s ease-out 0.2s, margin-left 0.2s ease-out 0.2s, margin-right 0.2s ease-out 0.2s, margin-top 0.2s ease-out 0.2s, margin-bottom 0.2s ease-out 0.2s, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  -o-transition: width 0.2s ease-out 0.2s, height 0.2s ease-out 0.2s, margin-left 0.2s ease-out 0.2s, margin-right 0.2s ease-out 0.2s, margin-top 0.2s ease-out 0.2s, margin-bottom 0.2s ease-out 0.2s, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition: width 0.2s ease-out 0.2s, height 0.2s ease-out 0.2s, margin-left 0.2s ease-out 0.2s, margin-right 0.2s ease-out 0.2s, margin-top 0.2s ease-out 0.2s, margin-bottom 0.2s ease-out 0.2s, opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.ipolnamespace .mCS-autoHide > .mCustomScrollBox > .mCSB_scrollTools,
+.ipolnamespace .mCS-autoHide > .mCustomScrollBox ~ .mCSB_scrollTools {
+  opacity: 0;
+  filter: "alpha(opacity=0)";
+  -ms-filter: "alpha(opacity=0)";
+}
+.ipolnamespace .mCS-autoHide:hover > .mCustomScrollBox > .mCSB_scrollTools,
+.ipolnamespace .mCS-autoHide:hover > .mCustomScrollBox ~ .mCSB_scrollTools,
+.ipolnamespace .mCustomScrollBox:hover > .mCSB_scrollTools,
+.ipolnamespace .mCustomScrollBox:hover ~ .mCSB_scrollTools,
+.ipolnamespace .mCustomScrollbar > .mCustomScrollBox > .mCSB_scrollTools.mCSB_scrollTools_onDrag,
+.ipolnamespace .mCustomScrollbar > .mCustomScrollBox ~ .mCSB_scrollTools.mCSB_scrollTools_onDrag {
+  opacity: 1;
+  filter: "alpha(opacity=100)";
+  -ms-filter: "alpha(opacity=100)";
+}
+.ipolnamespace .mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.4);
+  filter: "alpha(opacity=40)";
+  -ms-filter: "alpha(opacity=40)";
+}
+.ipolnamespace .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.75);
+  filter: "alpha(opacity=75)";
+  -ms-filter: "alpha(opacity=75)";
+}
+.ipolnamespace .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.85);
+  filter: "alpha(opacity=85)";
+  -ms-filter: "alpha(opacity=85)";
+}
+.ipolnamespace .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.ipolnamespace .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
+  filter: "alpha(opacity=90)";
+  -ms-filter: "alpha(opacity=90)";
+}
+.ipolnamespace .mCSB_scrollTools .mCSB_buttonDown,
+.ipolnamespace .mCSB_scrollTools .mCSB_buttonLeft,
+.ipolnamespace .mCSB_scrollTools .mCSB_buttonRight,
+.ipolnamespace .mCSB_scrollTools .mCSB_buttonUp {
+  background-image: url(mCSB_buttons.png);
+  background-repeat: no-repeat;
+  opacity: .4;
+  filter: "alpha(opacity=40)";
+  -ms-filter: "alpha(opacity=40)";
+}
+.ipolnamespace .mCSB_scrollTools .mCSB_buttonUp {
+  background-position: 0 0;
+}
+.ipolnamespace .mCSB_scrollTools .mCSB_buttonDown {
+  background-position: 0 -20px;
+}
+.ipolnamespace .mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: 0 -40px;
+}
+.ipolnamespace .mCSB_scrollTools .mCSB_buttonRight {
+  background-position: 0 -56px;
+}
+.ipolnamespace .mCSB_scrollTools .mCSB_buttonDown:hover,
+.ipolnamespace .mCSB_scrollTools .mCSB_buttonLeft:hover,
+.ipolnamespace .mCSB_scrollTools .mCSB_buttonRight:hover,
+.ipolnamespace .mCSB_scrollTools .mCSB_buttonUp:hover {
+  opacity: .75;
+  filter: "alpha(opacity=75)";
+  -ms-filter: "alpha(opacity=75)";
+}
+.ipolnamespace .mCSB_scrollTools .mCSB_buttonDown:active,
+.ipolnamespace .mCSB_scrollTools .mCSB_buttonLeft:active,
+.ipolnamespace .mCSB_scrollTools .mCSB_buttonRight:active,
+.ipolnamespace .mCSB_scrollTools .mCSB_buttonUp:active {
+  opacity: .9;
+  filter: "alpha(opacity=90)";
+  -ms-filter: "alpha(opacity=90)";
+}
+.ipolnamespace .mCS-dark.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.ipolnamespace .mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.ipolnamespace .mCS-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+.ipolnamespace .mCS-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.ipolnamespace .mCS-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.ipolnamespace .mCS-dark.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -80px 0;
+}
+.ipolnamespace .mCS-dark.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -80px -20px;
+}
+.ipolnamespace .mCS-dark.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -80px -40px;
+}
+.ipolnamespace .mCS-dark.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -80px -56px;
+}
+.ipolnamespace .mCS-dark-2.mCSB_scrollTools .mCSB_draggerRail,
+.ipolnamespace .mCS-light-2.mCSB_scrollTools .mCSB_draggerRail {
+  width: 4px;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
+.ipolnamespace .mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-light-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 4px;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.75);
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
+.ipolnamespace .mCS-dark-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-dark-2.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.ipolnamespace .mCS-light-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-light-2.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  width: 100%;
+  height: 4px;
+  margin: 6px auto;
+}
+.ipolnamespace .mCS-light-2.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+.ipolnamespace .mCS-light-2.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.ipolnamespace .mCS-light-2.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.ipolnamespace .mCS-light-2.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -32px 0;
+}
+.ipolnamespace .mCS-light-2.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -32px -20px;
+}
+.ipolnamespace .mCS-light-2.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -40px -40px;
+}
+.ipolnamespace .mCS-light-2.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -40px -56px;
+}
+.ipolnamespace .mCS-dark-2.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
+.ipolnamespace .mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.75);
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
+}
+.ipolnamespace .mCS-dark-2.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+.ipolnamespace .mCS-dark-2.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.ipolnamespace .mCS-dark-2.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.ipolnamespace .mCS-dark-2.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -112px 0;
+}
+.ipolnamespace .mCS-dark-2.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -112px -20px;
+}
+.ipolnamespace .mCS-dark-2.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -120px -40px;
+}
+.ipolnamespace .mCS-dark-2.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -120px -56px;
+}
+.ipolnamespace .mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail,
+.ipolnamespace .mCS-light-thick.mCSB_scrollTools .mCSB_draggerRail {
+  width: 4px;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.ipolnamespace .mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-light-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 6px;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.75);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.ipolnamespace .mCS-dark-thick.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.ipolnamespace .mCS-light-thick.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  width: 100%;
+  height: 4px;
+  margin: 6px 0;
+}
+.ipolnamespace .mCS-dark-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-light-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  width: 100%;
+  height: 6px;
+  margin: 5px auto;
+}
+.ipolnamespace .mCS-light-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+.ipolnamespace .mCS-light-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.ipolnamespace .mCS-light-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.ipolnamespace .mCS-light-thick.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -16px 0;
+}
+.ipolnamespace .mCS-light-thick.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -16px -20px;
+}
+.ipolnamespace .mCS-light-thick.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -20px -40px;
+}
+.ipolnamespace .mCS-light-thick.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -20px -56px;
+}
+.ipolnamespace .mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.ipolnamespace .mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.75);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.ipolnamespace .mCS-dark-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+.ipolnamespace .mCS-dark-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.ipolnamespace .mCS-dark-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.ipolnamespace .mCS-dark-thick.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -96px 0;
+}
+.ipolnamespace .mCS-dark-thick.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -96px -20px;
+}
+.ipolnamespace .mCS-dark-thick.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -100px -40px;
+}
+.ipolnamespace .mCS-dark-thick.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -100px -56px;
+}
+.ipolnamespace .mCS-light-thin.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.ipolnamespace .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-light-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 2px;
+}
+.ipolnamespace .mCS-dark-thin.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.ipolnamespace .mCS-light-thin.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  width: 100%;
+}
+.ipolnamespace .mCS-dark-thin.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-light-thin.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  width: 100%;
+  height: 2px;
+  margin: 7px auto;
+}
+.ipolnamespace .mCS-dark-thin.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.ipolnamespace .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.ipolnamespace .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+.ipolnamespace .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.ipolnamespace .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.ipolnamespace .mCS-dark-thin.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -80px 0;
+}
+.ipolnamespace .mCS-dark-thin.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -80px -20px;
+}
+.ipolnamespace .mCS-dark-thin.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -80px -40px;
+}
+.ipolnamespace .mCS-dark-thin.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -80px -56px;
+}
+.ipolnamespace .mCS-rounded.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.ipolnamespace .mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger,
+.ipolnamespace .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger,
+.ipolnamespace .mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger,
+.ipolnamespace .mCS-rounded.mCSB_scrollTools .mCSB_dragger {
+  height: 14px;
+}
+.ipolnamespace .mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-rounded.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 14px;
+  margin: 0 1px;
+}
+.ipolnamespace .mCS-rounded-dark.mCSB_scrollTools_horizontal .mCSB_dragger,
+.ipolnamespace .mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_dragger,
+.ipolnamespace .mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_dragger,
+.ipolnamespace .mCS-rounded.mCSB_scrollTools_horizontal .mCSB_dragger {
+  width: 14px;
+}
+.ipolnamespace .mCS-rounded-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-rounded.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  height: 14px;
+  margin: 1px 0;
+}
+.ipolnamespace .mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
+.ipolnamespace .mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
+.ipolnamespace .mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar {
+  width: 16px;
+  height: 16px;
+  margin: -1px 0;
+}
+.ipolnamespace .mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.ipolnamespace .mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail,
+.ipolnamespace .mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.ipolnamespace .mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+  width: 4px;
+}
+.ipolnamespace .mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
+.ipolnamespace .mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
+.ipolnamespace .mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar {
+  height: 16px;
+  width: 16px;
+  margin: 0 -1px;
+}
+.ipolnamespace .mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.ipolnamespace .mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail,
+.ipolnamespace .mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.ipolnamespace .mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+  height: 4px;
+  margin: 6px 0;
+}
+.ipolnamespace .mCS-rounded.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: 0 -72px;
+}
+.ipolnamespace .mCS-rounded.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: 0 -92px;
+}
+.ipolnamespace .mCS-rounded.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: 0 -112px;
+}
+.ipolnamespace .mCS-rounded.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: 0 -128px;
+}
+.ipolnamespace .mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.ipolnamespace .mCS-rounded-dark.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.ipolnamespace .mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.ipolnamespace .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+.ipolnamespace .mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.ipolnamespace .mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.ipolnamespace .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.ipolnamespace .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.ipolnamespace .mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -80px -72px;
+}
+.ipolnamespace .mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -80px -92px;
+}
+.ipolnamespace .mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -80px -112px;
+}
+.ipolnamespace .mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -80px -128px;
+}
+.ipolnamespace .mCS-rounded-dots-dark.mCSB_scrollTools_vertical .mCSB_draggerRail,
+.ipolnamespace .mCS-rounded-dots.mCSB_scrollTools_vertical .mCSB_draggerRail {
+  width: 4px;
+}
+.ipolnamespace .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail,
+.ipolnamespace .mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.ipolnamespace .mCS-rounded-dots.mCSB_scrollTools .mCSB_draggerRail,
+.ipolnamespace .mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  background-color: transparent;
+  background-position: center;
+}
+.ipolnamespace .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail,
+.ipolnamespace .mCS-rounded-dots.mCSB_scrollTools .mCSB_draggerRail {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANElEQVQYV2NkIAAYiVbw//9/Y6DiM1ANJoyMjGdBbLgJQAX/kU0DKgDLkaQAvxW4HEvQFwCRcxIJK1XznAAAAABJRU5ErkJggg==);
+  background-repeat: repeat-y;
+  opacity: .3;
+  filter: "alpha(opacity=30)";
+  -ms-filter: "alpha(opacity=30)";
+}
+.ipolnamespace .mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.ipolnamespace .mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  height: 4px;
+  margin: 6px 0;
+  background-repeat: repeat-x;
+}
+.ipolnamespace .mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -16px -72px;
+}
+.ipolnamespace .mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -16px -92px;
+}
+.ipolnamespace .mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -20px -112px;
+}
+.ipolnamespace .mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -20px -128px;
+}
+.ipolnamespace .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALElEQVQYV2NkIAAYSVFgDFR8BqrBBEifBbGRTfiPZhpYjiQFBK3A6l6CvgAAE9kGCd1mvgEAAAAASUVORK5CYII=);
+}
+.ipolnamespace .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -96px -72px;
+}
+.ipolnamespace .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -96px -92px;
+}
+.ipolnamespace .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -100px -112px;
+}
+.ipolnamespace .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -100px -128px;
+}
+.ipolnamespace .mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-repeat: repeat-y;
+  background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5) 0, rgba(255, 255, 255, 0) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(255, 255, 255, 0.5)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5) 0, rgba(255, 255, 255, 0) 100%);
+  background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0.5) 0, rgba(255, 255, 255, 0) 100%);
+  background-image: -ms-linear-gradient(left, rgba(255, 255, 255, 0.5) 0, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5) 0, rgba(255, 255, 255, 0) 100%);
+}
+.ipolnamespace .mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-3d-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-3d.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.5) 0, rgba(255, 255, 255, 0) 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255, 255, 255, 0.5)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5) 0, rgba(255, 255, 255, 0) 100%);
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.5) 0, rgba(255, 255, 255, 0) 100%);
+  background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.5) 0, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0, rgba(255, 255, 255, 0) 100%);
+}
+.ipolnamespace .mCS-3d-dark.mCSB_scrollTools_vertical .mCSB_dragger,
+.ipolnamespace .mCS-3d.mCSB_scrollTools_vertical .mCSB_dragger {
+  height: 70px;
+}
+.ipolnamespace .mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger,
+.ipolnamespace .mCS-3d.mCSB_scrollTools_horizontal .mCSB_dragger {
+  width: 70px;
+}
+.ipolnamespace .mCS-3d-dark.mCSB_scrollTools,
+.ipolnamespace .mCS-3d.mCSB_scrollTools {
+  opacity: 1;
+  filter: "alpha(opacity=30)";
+  -ms-filter: "alpha(opacity=30)";
+}
+.ipolnamespace .mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail,
+.ipolnamespace .mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-3d.mCSB_scrollTools .mCSB_draggerRail {
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+}
+.ipolnamespace .mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail,
+.ipolnamespace .mCS-3d.mCSB_scrollTools .mCSB_draggerRail {
+  width: 8px;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: inset 1px 0 1px rgba(0, 0, 0, 0.5), inset -1px 0 1px rgba(255, 255, 255, 0.2);
+}
+.ipolnamespace .mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-3d-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.ipolnamespace .mCS-3d-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.ipolnamespace .mCS-3d-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.ipolnamespace .mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-3d.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.ipolnamespace .mCS-3d.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.ipolnamespace .mCS-3d.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #555;
+}
+.ipolnamespace .mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 8px;
+}
+.ipolnamespace .mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.ipolnamespace .mCS-3d.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  width: 100%;
+  height: 8px;
+  margin: 4px 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5), inset 0 -1px 1px rgba(255, 255, 255, 0.2);
+}
+.ipolnamespace .mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-3d.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  width: 100%;
+  height: 8px;
+  margin: 4px auto;
+}
+.ipolnamespace .mCS-3d.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -32px -72px;
+}
+.ipolnamespace .mCS-3d.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -32px -92px;
+}
+.ipolnamespace .mCS-3d.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -40px -112px;
+}
+.ipolnamespace .mCS-3d.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -40px -128px;
+}
+.ipolnamespace .mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 1px 0 1px rgba(0, 0, 0, 0.1);
+}
+.ipolnamespace .mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+.ipolnamespace .mCS-3d-dark.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -112px -72px;
+}
+.ipolnamespace .mCS-3d-dark.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -112px -92px;
+}
+.ipolnamespace .mCS-3d-dark.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -120px -112px;
+}
+.ipolnamespace .mCS-3d-dark.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -120px -128px;
+}
+.ipolnamespace .mCS-3d-thick-dark.mCSB_scrollTools,
+.ipolnamespace .mCS-3d-thick.mCSB_scrollTools {
+  opacity: 1;
+  filter: "alpha(opacity=30)";
+  -ms-filter: "alpha(opacity=30)";
+}
+.ipolnamespace .mCS-3d-thick-dark.mCSB_scrollTools,
+.ipolnamespace .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerContainer,
+.ipolnamespace .mCS-3d-thick.mCSB_scrollTools,
+.ipolnamespace .mCS-3d-thick.mCSB_scrollTools .mCSB_draggerContainer {
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+}
+.ipolnamespace .mCSB_inside + .mCS-3d-thick-dark.mCSB_scrollTools_vertical,
+.ipolnamespace .mCSB_inside + .mCS-3d-thick.mCSB_scrollTools_vertical {
+  right: 1px;
+}
+.ipolnamespace .mCS-3d-thick-dark.mCSB_scrollTools_vertical,
+.ipolnamespace .mCS-3d-thick.mCSB_scrollTools_vertical {
+  box-shadow: inset 1px 0 1px rgba(0, 0, 0, 0.1), inset 0 0 14px rgba(0, 0, 0, 0.5);
+}
+.ipolnamespace .mCS-3d-thick-dark.mCSB_scrollTools_horizontal,
+.ipolnamespace .mCS-3d-thick.mCSB_scrollTools_horizontal {
+  bottom: 1px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 14px rgba(0, 0, 0, 0.5);
+}
+.ipolnamespace .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.4);
+  width: 12px;
+  margin: 2px;
+  position: absolute;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.ipolnamespace .mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-3d-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  height: 12px;
+  width: auto;
+}
+.ipolnamespace .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.ipolnamespace .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.ipolnamespace .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #555;
+}
+.ipolnamespace .mCS-3d-thick.mCSB_scrollTools .mCSB_draggerContainer {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.05);
+  box-shadow: inset 1px 1px 16px rgba(0, 0, 0, 0.1);
+}
+.ipolnamespace .mCS-3d-thick.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: transparent;
+}
+.ipolnamespace .mCS-3d-thick.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -32px -72px;
+}
+.ipolnamespace .mCS-3d-thick.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -32px -92px;
+}
+.ipolnamespace .mCS-3d-thick.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -40px -112px;
+}
+.ipolnamespace .mCS-3d-thick.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -40px -128px;
+}
+.ipolnamespace .mCS-3d-thick-dark.mCSB_scrollTools {
+  box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.2);
+}
+.ipolnamespace .mCS-3d-thick-dark.mCSB_scrollTools_horizontal {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 14px rgba(0, 0, 0, 0.2);
+}
+.ipolnamespace .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.4), inset -1px 0 0 rgba(0, 0, 0, 0.2);
+}
+.ipolnamespace .mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+.ipolnamespace .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.ipolnamespace .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.ipolnamespace .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #777;
+}
+.ipolnamespace .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerContainer {
+  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.05);
+  box-shadow: inset 1px 1px 16px rgba(0, 0, 0, 0.1);
+}
+.ipolnamespace .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerRail,
+.ipolnamespace .mCS-minimal-dark.mCSB_scrollTools .mCSB_draggerRail,
+.ipolnamespace .mCS-minimal.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: transparent;
+}
+.ipolnamespace .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -112px -72px;
+}
+.ipolnamespace .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -112px -92px;
+}
+.ipolnamespace .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -120px -112px;
+}
+.ipolnamespace .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -120px -128px;
+}
+.ipolnamespace .mCSB_outside + .mCS-minimal-dark.mCSB_scrollTools_vertical,
+.ipolnamespace .mCSB_outside + .mCS-minimal.mCSB_scrollTools_vertical {
+  right: 0;
+  margin: 12px 0;
+}
+.ipolnamespace .mCustomScrollBox.mCS-minimal + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal,
+.ipolnamespace .mCustomScrollBox.mCS-minimal + .mCSB_scrollTools.mCSB_scrollTools_horizontal,
+.ipolnamespace .mCustomScrollBox.mCS-minimal-dark + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal,
+.ipolnamespace .mCustomScrollBox.mCS-minimal-dark + .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+  bottom: 0;
+  margin: 0 12px;
+}
+.ipolnamespace .mCS-dir-rtl > .mCSB_outside + .mCS-minimal-dark.mCSB_scrollTools_vertical,
+.ipolnamespace .mCS-dir-rtl > .mCSB_outside + .mCS-minimal.mCSB_scrollTools_vertical {
+  left: 0;
+  right: auto;
+}
+.ipolnamespace .mCS-minimal-dark.mCSB_scrollTools_vertical .mCSB_dragger,
+.ipolnamespace .mCS-minimal.mCSB_scrollTools_vertical .mCSB_dragger {
+  height: 50px;
+}
+.ipolnamespace .mCS-minimal-dark.mCSB_scrollTools_horizontal .mCSB_dragger,
+.ipolnamespace .mCS-minimal.mCSB_scrollTools_horizontal .mCSB_dragger {
+  width: 50px;
+}
+.ipolnamespace .mCS-minimal.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  filter: "alpha(opacity=20)";
+  -ms-filter: "alpha(opacity=20)";
+}
+.ipolnamespace .mCS-minimal.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.ipolnamespace .mCS-minimal.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.5);
+  filter: "alpha(opacity=50)";
+  -ms-filter: "alpha(opacity=50)";
+}
+.ipolnamespace .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.2);
+  filter: "alpha(opacity=20)";
+  -ms-filter: "alpha(opacity=20)";
+}
+.ipolnamespace .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.ipolnamespace .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.5);
+  filter: "alpha(opacity=50)";
+  -ms-filter: "alpha(opacity=50)";
+}
+.ipolnamespace .mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail,
+.ipolnamespace .mCS-light-3.mCSB_scrollTools .mCSB_draggerRail {
+  width: 6px;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.ipolnamespace .mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-light-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 6px;
+}
+.ipolnamespace .mCS-dark-3.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-dark-3.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.ipolnamespace .mCS-light-3.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-light-3.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  width: 100%;
+  height: 6px;
+  margin: 5px 0;
+}
+.ipolnamespace .mCS-dark-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.ipolnamespace .mCS-dark-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail,
+.ipolnamespace .mCS-light-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.ipolnamespace .mCS-light-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+  width: 12px;
+}
+.ipolnamespace .mCS-dark-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.ipolnamespace .mCS-dark-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail,
+.ipolnamespace .mCS-light-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail,
+.ipolnamespace .mCS-light-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+  height: 12px;
+  margin: 2px 0;
+}
+.ipolnamespace .mCS-light-3.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -32px -72px;
+}
+.ipolnamespace .mCS-light-3.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -32px -92px;
+}
+.ipolnamespace .mCS-light-3.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -40px -112px;
+}
+.ipolnamespace .mCS-light-3.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -40px -128px;
+}
+.ipolnamespace .mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.ipolnamespace .mCS-dark-3.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+.ipolnamespace .mCS-dark-3.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.ipolnamespace .mCS-dark-3.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.ipolnamespace .mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.ipolnamespace .mCS-dark-3.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -112px -72px;
+}
+.ipolnamespace .mCS-dark-3.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -112px -92px;
+}
+.ipolnamespace .mCS-dark-3.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -120px -112px;
+}
+.ipolnamespace .mCS-dark-3.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -120px -128px;
+}
+.ipolnamespace .mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail,
+.ipolnamespace .mCS-inset-2.mCSB_scrollTools .mCSB_draggerRail,
+.ipolnamespace .mCS-inset-3-dark.mCSB_scrollTools .mCSB_draggerRail,
+.ipolnamespace .mCS-inset-3.mCSB_scrollTools .mCSB_draggerRail,
+.ipolnamespace .mCS-inset-dark.mCSB_scrollTools .mCSB_draggerRail,
+.ipolnamespace .mCS-inset.mCSB_scrollTools .mCSB_draggerRail {
+  width: 12px;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.ipolnamespace .mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-inset-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-inset-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-inset-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-inset.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 6px;
+  margin: 3px 5px;
+  position: absolute;
+  height: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.ipolnamespace .mCS-inset-2-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-inset-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-inset-3-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-inset-3.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-inset-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-inset.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+  height: 6px;
+  margin: 5px 3px;
+  position: absolute;
+  width: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.ipolnamespace .mCS-inset-2-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.ipolnamespace .mCS-inset-2.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.ipolnamespace .mCS-inset-3-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.ipolnamespace .mCS-inset-3.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.ipolnamespace .mCS-inset-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail,
+.ipolnamespace .mCS-inset.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+  width: 100%;
+  height: 12px;
+  margin: 2px 0;
+}
+.ipolnamespace .mCS-inset-2.mCSB_scrollTools .mCSB_buttonUp,
+.ipolnamespace .mCS-inset-3.mCSB_scrollTools .mCSB_buttonUp,
+.ipolnamespace .mCS-inset.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -32px -72px;
+}
+.ipolnamespace .mCS-inset-2.mCSB_scrollTools .mCSB_buttonDown,
+.ipolnamespace .mCS-inset-3.mCSB_scrollTools .mCSB_buttonDown,
+.ipolnamespace .mCS-inset.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -32px -92px;
+}
+.ipolnamespace .mCS-inset-2.mCSB_scrollTools .mCSB_buttonLeft,
+.ipolnamespace .mCS-inset-3.mCSB_scrollTools .mCSB_buttonLeft,
+.ipolnamespace .mCS-inset.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -40px -112px;
+}
+.ipolnamespace .mCS-inset-2.mCSB_scrollTools .mCSB_buttonRight,
+.ipolnamespace .mCS-inset-3.mCSB_scrollTools .mCSB_buttonRight,
+.ipolnamespace .mCS-inset.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -40px -128px;
+}
+.ipolnamespace .mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.ipolnamespace .mCS-inset-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.ipolnamespace .mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.ipolnamespace .mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.ipolnamespace .mCS-inset-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+.ipolnamespace .mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.ipolnamespace .mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.ipolnamespace .mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.ipolnamespace .mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.ipolnamespace .mCS-inset-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.ipolnamespace .mCS-inset-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.ipolnamespace .mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail,
+.ipolnamespace .mCS-inset-3-dark.mCSB_scrollTools .mCSB_draggerRail,
+.ipolnamespace .mCS-inset-dark.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.ipolnamespace .mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonUp,
+.ipolnamespace .mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonUp,
+.ipolnamespace .mCS-inset-dark.mCSB_scrollTools .mCSB_buttonUp {
+  background-position: -112px -72px;
+}
+.ipolnamespace .mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonDown,
+.ipolnamespace .mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonDown,
+.ipolnamespace .mCS-inset-dark.mCSB_scrollTools .mCSB_buttonDown {
+  background-position: -112px -92px;
+}
+.ipolnamespace .mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonLeft,
+.ipolnamespace .mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonLeft,
+.ipolnamespace .mCS-inset-dark.mCSB_scrollTools .mCSB_buttonLeft {
+  background-position: -120px -112px;
+}
+.ipolnamespace .mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonRight,
+.ipolnamespace .mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonRight,
+.ipolnamespace .mCS-inset-dark.mCSB_scrollTools .mCSB_buttonRight {
+  background-position: -120px -128px;
+}
+.ipolnamespace .mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail,
+.ipolnamespace .mCS-inset-2.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ipolnamespace .mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail {
+  border-color: #000;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+.ipolnamespace .mCS-inset-3.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.ipolnamespace .mCS-inset-3-dark.mCSB_scrollTools .mCSB_draggerRail {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.ipolnamespace .mCS-inset-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.ipolnamespace .mCS-inset-3.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+.ipolnamespace .mCS-inset-3.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.ipolnamespace .mCS-inset-3.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.ipolnamespace .mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.ipolnamespace .mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+.ipolnamespace .mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.ipolnamespace .mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.ipolnamespace_close {
+  position: absolute;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAPdJREFUeNqkk8kKwjAQQFMrin6LX+UfCKKIlrrUulAXPAp6EBHRm4go/SpP3qoTmIEQapsl8CDL5DFJJowx9gG2gMvMmwNEQMIHLeAL7IGCoWyDjh5NDgWpqylbyzJqI1w4aEhXuMf7F0DSo4J0mSeTj3/KkEYY46veDUnPKdKZrkyWXoAizoU41zetL5JeBdmAWTaScoK8YJVCToR+DSjZZOcLmVGmN1Oph4JxyvHvutIubgwz7vQBlFVkHdwwUXioJ1DJkrUxcKrx+i+gmhbQxICZQUnFsrSBC3OLOo3poepYawuL8gpQuuODN3Ycyx/FE0p+AgwAbXlNtud6K/AAAAAASUVORK5CYII=) center center no-repeat;
+  height: 22px;
+  width: 22px;
+  right: 15px;
+  top: 15px;
+  z-index: 1000;
+  opacity: .5;
+  cursor: pointer;
+  transition: opacity .2s linear;
+}
+.ipolnamespace_close:hover {
+  opacity: 1;
+}
+.ipolnamespace_map {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-sizing: content-box;
+  margin: auto !important;
+  padding: 0 !important;
+  border: 10px solid white;
+  display: block;
+  overflow: hidden;
+}
+.ipolnamespace_info {
+  position: absolute;
+  width: 245px;
+  bottom: 20px;
+  color: black;
+  top: 60px;
+  left: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #5D5D5D;
+}
+@media (max-width: 480px) {
+  .ipolnamespace_info {
+    width: auto;
+    right: 52px;
+  }
+}
+@media (max-width: 800px) {
+  .ipolnamespace_info {
+    bottom: auto;
+    top: 58px;
+    left: 18px;
+  }
+  .ipolnamespace_info.expanded {
+    bottom: 18px;
+  }
+}
+.ipolnamespace #insales_logo {
+  width: 170px;
+  height: 30px;
+  /*background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(data:image/png;base64,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);
+  background-size: contain;*/
+  float: left;
+}
+.ipolnamespace_logo,
+.ipolnamespace_close,
+.ipolnamespace_custom_logo {
+  font-size: 12px;
+  font-family: 'Arial', sans-serif;
+  float: left;
+}
+.ipolnamespace_logo {
+  background: url('//ipolh.com/webService/insales/dostavka/images/logo.png') no-repeat transparent;
+  width: 169px;
+  height: 11px;
+  margin-top: 11px;
+}
+.ipolnamespace_logo:hover {
+  background-position: 0px -12px;
+}
+.ipolnamespace_logo a {
+  border: 0 !important;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.ipolnamespace_wrapper {
+  height: 100%;
+  overflow: auto;
+  border: none;
+  outline: none;
+  background-color: #fafafa;
+}
+.ipolnamespace_wrapper.busy {
+  background: #fff url(data:image/gif;base64,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) no-repeat center center;
+}
+.ipolnamespace_wrapper div[data-type="list-item"] {
+  line-height: 1;
+  cursor: pointer;
+  padding: 10px 6px;
+  margin: 0 6px;
+  font-size: 12px;
+}
+.ipolnamespace_wrapper div[data-type="list-item"][data-active],
+.ipolnamespace_wrapper div[data-type="list-item"][data-hover] {
+  background-color: #ebebeb;
+}
+.ipolnamespace_pvz {
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+.ipolnamespace_filter_list {
+    /*margin-bottom: 10px;*/
+    background: #fff;
+}
+
+.ipolnamespace_filter_list .list_filter {
+    border-bottom: 1px solid #e3e3e3;
+    padding: 10px 5px;
+    height: 55px;
+}
+
+.ipolnamespace_filter_list .list_filter label {
+    display: block;
+    height: 100%;
+    position: relative;
+}
+
+.ipolnamespace_filter_list .list_filter label .list_filter_name{
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: 50px;
+    
+}
+
+.ipolnamespace_filter_list .list_filter label .list_filter_name img{
+    max-height: 100%;
+    max-width: 50px;
+}
+
+.ipolnamespace_filter_list .list_filter label .list_filter_info {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 11px;
+    width: calc(100% - 75px);
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.ipolnamespace_filter_list .list_filter label .list_filter_info > span {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.ipolnamespace_filter_list .list_filter input[type="checkbox"] {
+  display: none;
+}
+
+.ipolnamespace_filter_list .list_filter input[type="checkbox"]:not(checked) + label::after{
+    content: '';
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #a9a9a9;
+    border-radius: 2px;
+    background: #ffffff;
+}
+
+.ipolnamespace_filter_list .list_filter input[type="checkbox"]:not(checked) + label::before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 12px;
+    height: 12px;
+    transition: 0.3s;
+    z-index: 2;
+
+}
+
+.ipolnamespace_filter_list .list_filter input[type="checkbox"]:checked + label::before {
+  background: url('data:image/png;base64,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');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+.ipolnamespace_pvz_list {
+  /*position: absolute;*/
+  top: 38px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fafafa;
+}
+
+@media (max-width: 800px) {
+  .ipolnamespace_pvz_list {
+    top: 28px;
+  }
+}
+.ipolnamespace_head {
+  height: 40px;
+  padding: 7px 20px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.ipolnamespace_sign {
+  height: 38px;
+  line-height: 38px;
+  font-size: 14px;
+  padding-left: 10px;
+  border-bottom: 1px solid #e3e3e3;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+@media (max-width: 800px) {
+  .ipolnamespace_sign {
+    overflow: hidden;
+    cursor: pointer;
+    height: 28px;
+    line-height: 28px;
+  }
+  .ipolnamespace_sign:after {
+    content: "";
+    transition: all .2s linear;
+    transform-origin: center center;
+    display: block;
+    float: right;
+    height: 100%;
+    width: 40px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    z-index: 1;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMyIDMyIiBoZWlnaHQ9IjMycHgiIGlkPSLQodC70L7QuV8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMycHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik0yNC4yODUsMTEuMjg0TDE2LDE5LjU3MWwtOC4yODUtOC4yODhjLTAuMzk1LTAuMzk1LTEuMDM0LTAuMzk1LTEuNDI5LDAgIGMtMC4zOTQsMC4zOTUtMC4zOTQsMS4wMzUsMCwxLjQzbDguOTk5LDkuMDAybDAsMGwwLDBjMC4zOTQsMC4zOTUsMS4wMzQsMC4zOTUsMS40MjgsMGw4Ljk5OS05LjAwMiAgYzAuMzk0LTAuMzk1LDAuMzk0LTEuMDM2LDAtMS40MzFDMjUuMzE5LDEwLjg4OSwyNC42NzksMTAuODg5LDI0LjI4NSwxMS4yODR6IiBmaWxsPSIjMTIxMzEzIiBpZD0iRXhwYW5kX01vcmUiLz48Zy8+PGcvPjxnLz48Zy8+PGcvPjxnLz48L3N2Zz4=);
+  }
+}
+@media (max-width: 800px) {
+  .expanded .ipolnamespace_sign:after {
+    transform: rotate(180deg);
+  }
+}
+.ipolnamespace_logoPlace {
+  width: 300px;
+  height: 38px;
+  background-image: url("/webService/insales/dostavka/images/apishipogo.png");
+  background-repeat: no-repeat;
+  background-position: 241px 2px;
+}
+.ipolnamespace_separator {
+  background-color: #e3e3e3;
+  width: 1px;
+  height: 38px;
+}
+@media (min-width: 800px) {
+  .ipolnamespace_ten {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    height: 10px;
+    box-shadow: 0 0 5px 5px white;
+    width: 235px;
+    opacity: 0.7;
+  }
+}
+.ipolnamespace_head .apiship-header-block {
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  float: left;
+}
+.ipolnamespace_mask {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  position: fixed;
+  z-index: 2000;
+  background-color: black;
+  display: none;
+  top: 0px;
+  padding: 5px;
+}
+.ipolnamespace .list_heading {
+  font-weight: bold;
+  font-size: 12px;
+  border-bottom: 1px dashed #e3e3e3;
+  border-top: 1px dashed #e3e3e3;
+  line-height: 35px;
+  padding: 0px 9px;
+  background-color: #fafafa;
+}
+.ipolnamespace .list_heading img {
+  display: inline-block;
+  padding-right: 5px;
+  height: 10px;
+  margin-top: -2px;
+}
+.widget_map {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 919px) {
+  .ipolnamespaceinfo {
+    height: 39px;
+  }
+  .ipolnamespacesign .arr {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAEW0lEQVR4Xu3dO24UQRSF4WMhYh4BiyADAmIiHhEbYB+sgH2wBAICBBIJRmIHLIEUQUSAUIsZaUDjrqruW9117jnOkHvKVff/VIAt2xfwm/QELqRP78PDAMQRGIABiE9A/Pi+AQxAfALix/cNYADiExA/vm8AAxCfgPjxfQMYgPgExI/vG8AAxCcgfnzfAAYgPgHx4/sGMADxCYgf3zeAAYhPQPz4vgEMQHwC4sf3DWAA4hMQP75vAAMQn4D48X0DGID4BMSP7xvAAMQnIH583wAGID4B8eO33gB3AbwC8ALAD/HZjXb8GwBeA3gJ4Gvt5loATPE/ArgD4DOAJ0ZQO+buz03x3wF4COAbgEe1CGoBnMY/nsYIunet+gCn8Y8vqEZQA+BcfCOoatP9oXPxmxCUAMzFN4LufWc/wFz8agQlAG8BPKs4p/86qBhS4CM18Y8f7g2A51d97BKAmwA+AHhQsXkjqBhSwCMt8b8AeAzg+1IA0+uMIKBa0BKh8ac9lW6A476NIKjgimXC47cA8E2wolzAS7vEbwVgBAElFyzRLf4SAEawoOCKl3SNvxSAEawo2vDS7vHXAGhFcAngqb92UJ1/k/hrARhBdc+mBzeLHwHACJraFh/eNH4UACModq16YPP4kQCMoKrxlQ/tEj8agBEsQ7Bb/B4AjKANwa7xewGY1r0F4H3lVxFV/4u4e/yeAIxg/iYYIn5vAEZwHsEw8bcAYAT/Ihgq/lYAjOAvguHibwlgCYLp+w5+tv2jetinh4y/NQBVBMPG3wOAGoKh4+8FQAXB8PH3BJAdAUX8vQFkRUATfwQA2RBQxR8FQBYEdPFHAnBEMH0b2v2K/81PX0Aa6fMElPFHA8CKgDb+iADYEFDHHxUACwL6+CMDGB1BivijAxgVQZr4DABaEXw6fAdSr68iporPAmAUBOniMwHYG0HK+GwA9kKQNj4jgK0RpI7PCmArBOnjMwPojUAiPjuAXghk4mcAEI1AKn4WAFEI5OJnAjCd5fbhx9rem/5QePv/M4aS8bMBWIrg2skvWyjBKf7s3dICo72/9kfFjrbvuf203gTXD79po3TGdPEz3gDHiC0ISuGn96eMnxlA618HcwjSxs8OIAJB6vgKANYgSB9fBcASBBLxlQC0IJCJrwagBoFUfEUAcwjk4qsCOIdAMr4ygFMEv0q/Wq3mM0Wsz2T8VHBLi+knmv6e+716LYsxPqsOgLFZ6J4NIHScfIsZAF+z0B0bQOg4+RYzAL5moTs2gNBx8i1mAHzNQndsAKHj5FvMAPiahe7YAELHybeYAfA1C92xAYSOk28xA+BrFrpjAwgdJ99iBsDXLHTHBhA6Tr7FDICvWeiODSB0nHyLGQBfs9AdG0DoOPkWMwC+ZqE7NoDQcfItZgB8zUJ3bACh4+RbzAD4moXu2ABCx8m3mAHwNQvdsQGEjpNvMQPgaxa6YwMIHSffYgbA1yx0xwYQOk6+xf4AbOlSkPERa14AAAAASUVORK5CYII=) no-repeat;
+    display: block;
+    float: right;
+    width: 23px;
+    height: 20px;
+    background-size: cover;
+    margin: 9px;
+  }
+  info.visible sign .arr {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAEN0lEQVR4Xu2bMY4TQRBF/xKQkUDCEciAkJCAAAg4A9cg5SDcgQAJCYRgU07AAYgJIEJIaCRbgFl7usdd3b/r/013prbqv+ea8Xh9Af9IJ3AhPb2HhwUQl8ACWADxBMTH9wawAOIJiI/vDWABxBMQH98bwAKIJyA+vjeABRBPQHx8bwALIJ6A+PjeABZAPAHx8b0BLIB4AuLjewNYAPEExMf3BrAA4gmIj+8NYAHEExAf3xvAAognID6+N4AFEE9AfHxvAAsgnoD4+N4AFkA6gVsAfgH4ppqC8gZY4L8H8BPAI1UJVAXYw7+7e+V/VpVAUYBD+PvtLymBmgDH4MtKoCTAGnxJCVQEKIUvJ4GCALXwpSTILsBW+DISZBbgXPgSEmQVoBX89BJkFKAG/kcA1wE8KHgUnPI5QTYBauE/BXANwFtVCTIJsAX+j90r/4aqBFkEOAf+fvtLSpBBgAX+OwD3Cq7jyzV/Wfv7V/7hKXISzC5AS/iSm2BmASLgy0kwqwCR8KUkmFGAHvBlJJhNgJ7wJSSYSYAR8NNLMIsAI+GnlmAGARjgp5WAXYAa+J8APDnxkKfgOVHRIakeFjELwAg/3SZgFYAZfioJGAWYAX4aCdgEmAl+CgmYBLi5+65eyad6vW74iu4KAUx7Y8giwMzwp94EDAJkgD+tBKMFyAR/SglGCpAR/nQSjBIgM/ypJBghgAL8aSToLYAS/Ckk6CmAInx6CXoJUAP/EsDjDp/qlT7kaXUc5cOiHgIY/h+F6CSIFsDw/98fVBJECmD4xy8eNBJECWD463cOFBJECGD46/Bp3h20FmCBv3xR835BBlnv9gtG/+eQoZugpQCGX4ue4N1BKwEMfzv8oZeDFgIY/vnwh0lwrgCG3w7+EAnOEcDw28PvLsFWAQw/Dn5XCbYIUAt/+brW9/i8Uv6F8LeItQIYfn/PQiWoEcDw+8MPvxyUCmD44+CHSlAigOGPhx8mwZoAhs8DP0SCNQHe7P49ay2G5YMd3+2vpdTu9zU3hq8BPDv2p9cEuAPgA4DbJ3o3/HZgayqVSPAVwEMAX7YKsJx3SgLDr0HW/thTEqzCX9pZ2wD7lq+SwPDbA91S8SoJiuDXCHC4CQx/C6q4c/6WoBh+rQB7CV4CeO7Hu3E0N1ZeJHgF4MWpa/5h7dJLwMaefBp7AhaAnVBwfxYgOGD28haAnVBwfxYgOGD28haAnVBwfxYgOGD28haAnVBwfxYgOGD28haAnVBwfxYgOGD28haAnVBwfxYgOGD28haAnVBwfxYgOGD28haAnVBwfxYgOGD28haAnVBwfxYgOGD28haAnVBwfxYgOGD28haAnVBwfxYgOGD28haAnVBwfxYgOGD28haAnVBwfxYgOGD28haAnVBwfxYgOGD28haAnVBwfxYgOGD28haAnVBwfxYgOGD28r8BZGdSkM0AwmoAAAAASUVORK5CYII=) no-repeat;
+    background-size: cover;
+  }
+  info.visible {
+    height: 480px;
+  }
+  info.visible #pvz_list {
+    display: block;
+  }
+}
+#pvz_list {
+  height: 100%;
+  padding-top: 38px;
+  box-sizing: border-box;
+  margin-top: -38px;
+}
+.apiship_balloon {
+  margin-top: 5px;
+  background-color: #fff;
+  font-family: Arial;
+  font-size: 12px;
+}
+.apiship_balloon p {
+  margin: 10px 0px;
+  max-width: 235px;
+  overflow: hidden;
+}
+.apiship_balloon a {
+  color: #666666;
+  text-decoration: none;
+  border-bottom: 1px dashed #666666;
+}
+.apiship_balloon a:hover {
+  border-bottom: 1px dashed white;
+}
+.apiship_balloon .address {
+  height: 30px;
+  font-size: 14px;
+}
+.apiship_balloon .phone {
+  background: url('/webService/insales/dostavka/images/phone.png') no-repeat 0 4px;
+}
+.apiship_balloon .timetable {
+  background: url('/webService/insales/dostavka/images/clock.png') no-repeat 0 4px;
+}
+.apiship_provider_balloon_img {
+  float: left;
+  max-width: 80px;
+  max-height: 30px;
+  margin: 0 12px 5px 0;
+}
+.apiship_icon {
+  padding-left: 20px;
+}
+.apiship_button {
+  width: 130px;
+  height: 25px;
+  background: url('/webService/insales/dostavka/images/chooze.png') no-repeat;
+  display: block;
+  margin: auto;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+}
+.apiship_button:hover {
+  background-position: 0px -25px;
+}
+.apiship_mark {
+  margin-left: 12px;
+}
+sign .arr {
+  display: none;
+}
+@media screen and (max-width: 919px) {
+  #pvz_list {
+    display: none;
+  }
+}
+.pvz-name-text
+{
+	position: absolute;
+}
+.ballonButton
+{
+	padding-left: 19px;
+	margin-top: 4px;
+}
+.pvz-type-text {
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+  position: relative;
+  margin-right: 5px;
+}
+.pvz-type-text:before {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  display: none;
+  z-index: 1;
+  padding: 5px;
+  font: inherit;
+  background-color: #fff;
+  border: 1px solid black;
+  white-space: nowrap;
+}
+.pvz-type-text:hover:before {
+  display: block;
+}
+.pvz-type-text.color-1 {
+  color: green;
+}
+.pvz-type-text.color-2 {
+  color: #f86904;
+}
+.pvz-type-text.color-3 {
+  color: red;
+}
+#map {
+  width: 100%;
+  height: 100%;
+}
+.widget_map #close-btn {
+  display: block;
+  width: 30px;
+  height: 40px;
+  margin-right: 4px;
+  cursor: pointer;
+  opacity: .3;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCI+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNCAuN2wtLjctLjdMNyA2LjMuNyAwIDAgLjcgNi4zIDcgMCAxMy4zbC43LjdMNyA3LjdsNi4zIDYuMy43LS43TDcuNyA3eiIvPjwvc3ZnPg==);
+}
+.widget_map > ymaps {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.apiship_link
+{
+  color:#fff !important;
+  background: #257423 !important;
+  width: fit-content;
+  text-decoration: none !important;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 13px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}

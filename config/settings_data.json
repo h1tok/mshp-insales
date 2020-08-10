@@ -1,0 +1,39 @@
+{
+  "common_js_version": "v2",
+  "current": "custom",
+  "not_need_shop_bundle": true,
+  "presets": {
+    "custom": {
+      "palette_1__color-background": "#FFFFFF",
+      "palette_1__color-background-sub": "#C01F3C",
+      "palette_1__color-text": "#434343",
+      "palette_1__color-link": "#C01F3C",
+      "palette_1__color-border": "#EEEEEE",
+      "palette_2__color-background": "#FFFFFF",
+      "palette_2__color-background-sub": "#EEEEEE",
+      "palette_2__color-text": "#434343",
+      "palette_2__color-link": "#C01F3C",
+      "palette_2__color-border": "#E5E5E5",
+      "palette_3__color-background": "#EEEEEE",
+      "palette_3__color-background-sub": "#C01F3C",
+      "palette_3__color-text": "#434343",
+      "palette_3__color-link": "#434343",
+      "palette_3__color-border": "#EEEEEE",
+      "root__body_background_color": "#FFFFFF",
+      "background_container_use": true,
+      "root__background_container": "#FFFFFF",
+      "body_background_type": "stretch",
+      "font_family_primary": "google:Ubuntu",
+      "font_size_primary": "14px",
+      "logotype_type": "text",
+      "logotype_font_family": "google:Ubuntu",
+      "logotype_font_size": "40px",
+      "product_not_available": "preorder",
+      "collection_size": "12"
+    }
+  },
+  "remote_theme_id": 418,
+  "source_account_id": null,
+  "theme_title": "Прайм",
+  "vue_ui_version": "v1"
+}

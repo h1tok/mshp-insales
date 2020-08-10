@@ -1,0 +1,16 @@
+<ui-product
+  :product-id="{{ product.id }}"
+  instance-name="main"
+></ui-product>
+
+{% for widgetDrop in widget_lists.common_product-list.widgets %}
+  {% widget widgetDrop %}
+{% endfor %}
+
+<script>
+  $(document).ready(function()
+                    {
+    console.log( '{{cart}}' );
+  }
+                    );
+</script>

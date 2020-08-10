@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="palette_1" >
+  <head>
+    {% include "system_head" %}
+    {% include "styles" %}
+  </head>
+  <body>
+    {% include "system_no_js_alert" %}
+
+    <div id="app"
+      checkbox-hide-native
+      radio-hide-native
+      icon-theme="fontawesome"
+    >
+    <div class='wrapper-cloak' v-cloak >
+
+
+      {% for widgetDrop in widget_lists.common_header-list.widgets %}
+        {% widget widgetDrop %}
+      {% endfor %}
+
+      <ui-layout-part
+        class="content-wrapper"
+        type="body"
+        >
+        {% assign content_cells = 'cells="9" cells-md="8" cells-sm="12"' %}
+        {% assign sidebar_cells = 'cells="3" cells-md="4"' %}
+
+        {% if template contains 'cart' %}
+          {% assign content_cells = 'cells="12"' %}
+          {% assign sidebar_cells = '' %}
+        {% endif %}
+
+        {% if template contains 'blog' or template contains 'article' %}
+        {% assign sidebar_position = 'flex-last' %}
+        {% endif %}
+
+          {% if template contains 'collection' or template contains 'index' or template contains 'product' or template contains 'search' or template contains 'page' %}
+          {% assign sidebar_position = 'flex-first' %}
+        {% endif %}
+
+        <ui-grid
+          class="{{ template }}-wrapper"
+          hr-gutter="1.5rem"
+          vr-gutter="2rem"
+          >
+
+          <ui-grid-cell v-hidden="[['', 'sm']]"
+            {{ sidebar_cells }}
+            class="{{ sidebar_position }}"
+          >
+            {% unless sidebar_cells == '' %}
+            <ui-grid
+              class="sidebar"
+              vr-gutter="2rem"
+              direction="column"
+              >
+              {% if template contains 'blog' or template contains 'article' %}
+              {% for widgetDrop in widget_lists.common_sidebar-blog_list.widgets %}
+                {% widget widgetDrop %}
+              {% endfor %}
+
+                    {% else %}
+              {% for widgetDrop in widget_lists.common_sidebar-list.widgets %}
+                {% widget widgetDrop %}
+              {% endfor %}
+
+              {% endif %}
+            </ui-grid>
+            {% endunless %}
+          </ui-grid-cell>
+
+          <ui-grid-cell class="{{ template }}"
+            {{ content_cells }}
+          >
+          <ui-grid
+            class="main"
+            vr-gutter="2rem"
+            direction="column"
+            >
+            {{ content_for_layout }}
+          </ui-grid>
+          </ui-grid-cell>
+
+        </ui-grid>
+      </ui-layout-part>
+      {% for widgetDrop in widget_lists.common_footer-list.widgets %}
+        {% widget widgetDrop %}
+      {% endfor %}
+    </div>
+    </div>
+  </body>
+</html>
