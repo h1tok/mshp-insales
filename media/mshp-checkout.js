@@ -10,12 +10,30 @@ var gets = (function() {
 })();
 
 if(typeof gets['mobile'] !== 'undefined'){
+<<<<<<< HEAD
+=======
+    /* Удаляем из корзины */
+    ajaxAPI.cart.remove(76267453).done(function (onDone) {
+
+        /!* Добавляем в корзину *!/
+        ajaxAPI.cart.add({
+            76267453: 1
+        }).done(function (onDone) {
+
+        });
+    });
+
+>>>>>>> 9bdb363c28ae61128d482169e5358eb7d6a465aa
     window.onload = function () {
                 document.body.classList.add('loaded_hiding');
                 window.setTimeout(function () {
                     document.body.classList.add('loaded');
                     document.body.classList.remove('loaded_hiding');
+<<<<<<< HEAD
                 }, 100);
+=======
+                }, 500);
+>>>>>>> 9bdb363c28ae61128d482169e5358eb7d6a465aa
 
                 /* Проверка авторизации
                  ajaxAPI.shop.client.get()
@@ -33,4 +51,8 @@ if(typeof gets['mobile'] !== 'undefined'){
         document.body.classList.add('loaded');
         document.body.classList.remove('loaded_hiding');
     }
+<<<<<<< HEAD
 } 
+=======
+}
+>>>>>>> 9bdb363c28ae61128d482169e5358eb7d6a465aa
