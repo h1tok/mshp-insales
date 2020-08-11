@@ -10,7 +10,7 @@ var gets = (function() {
 })();
 
 if(typeof gets['mobile'] !== 'undefined'){
-    window.onload = function () { 
+    window.onload = function () {
                 document.body.classList.add('loaded_hiding');
                 window.setTimeout(function () {
                     document.body.classList.add('loaded');
@@ -33,4 +33,4 @@ if(typeof gets['mobile'] !== 'undefined'){
         document.body.classList.add('loaded');
         document.body.classList.remove('loaded_hiding');
     }
-}
+} 
