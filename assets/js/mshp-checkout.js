@@ -18,10 +18,10 @@ if(typeof gets['mobile'] !== 'undefined'){
         }, 100);
 
         /* Проверка авторизации
-         ajaxAPI.shop.client.get()
+         ajaxAPI.shop.client.get() 
              .done(function (onDone) { console.log('getClient: ', onDone) });
          Проверка авторизации */
-  
+
         /* Скрываем блоки */
         $(".header-wrapper").remove();
         $(".footer-wrapper").remove();
