@@ -8,12 +8,27 @@
 
   <link  href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
+  <!--mshp-->
+  <link  href="{{ 'mshp.css' | asset_url }}" rel='stylesheet' type='text/css'>
+  <!--mshp-->
+
   {{ 'checkout2.core' | global_stylesheet_tag }}
 
   {% include "styles" %}
 
 </head>
 <body class="adaptive">
+
+  <!--mshp-->
+  <div class="preloader">
+    <svg class="preloader__image" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <path fill="currentColor"
+            d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z">
+      </path>
+    </svg>
+  </div>
+  <!--mshp-->
+
   <div id="app"
   checkbox-hide-native
   radio-hide-native
@@ -43,7 +58,6 @@
         {% yield %}
       </div>
     </div>
-
 </ui-layout-part>
 
 {% for widgetDrop in widget_lists.common_footer-list.widgets %}
@@ -52,5 +66,11 @@
 </div>
 </div>
 </body>
+
+  <!--mshp-->
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script src="{{ 'mshp-account.js' | asset_url }}" charset="utf-8"></script>
+  <!--mshp-->
+
   <script src="{{ 'theme.js' | asset_url }}" charset="utf-8"></script>
 </html>
