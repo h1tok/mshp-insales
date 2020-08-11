@@ -11,21 +11,21 @@ var gets = (function() {
 
 if(typeof gets['mobile'] !== 'undefined'){
     window.onload = function () {
-                document.body.classList.add('loaded_hiding');
-                window.setTimeout(function () {
-                    document.body.classList.add('loaded');
-                    document.body.classList.remove('loaded_hiding');
-                }, 100);
+        document.body.classList.add('loaded_hiding');
+        window.setTimeout(function () {
+            document.body.classList.add('loaded');
+            document.body.classList.remove('loaded_hiding');
+        }, 100);
 
-                /* Проверка авторизации
-                 ajaxAPI.shop.client.get()
-                     .done(function (onDone) { console.log('getClient: ', onDone) });
-                 Проверка авторизации */
-
-                /* Скрываем блоки */
-                $(".header-wrapper").remove();
-                $(".footer-wrapper").remove();
-                $('.header-menu-wrapper').parent(".grid__cell.palette_1").remove();
+        /* Проверка авторизации
+         ajaxAPI.shop.client.get()
+             .done(function (onDone) { console.log('getClient: ', onDone) });
+         Проверка авторизации */
+  
+        /* Скрываем блоки */
+        $(".header-wrapper").remove();
+        $(".footer-wrapper").remove();
+        $('.header-menu-wrapper').parent(".grid__cell.palette_1").remove();
     }
 }else{
     window.onload = function () {
