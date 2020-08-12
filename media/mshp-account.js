@@ -11,7 +11,7 @@ var gets = (function() {
 
 var uploadOn = (function (){
     window.onload = function () {
-        document.body.classList.add('loaded_hiding');
+        document.body.classList.add('oaded_hiding');
         document.body.classList.add('loaded');
         document.body.classList.remove('loaded_hiding');
     }
