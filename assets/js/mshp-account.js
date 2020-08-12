@@ -58,19 +58,30 @@ if(typeof gets['mobile'] !== 'undefined') {
         }
     }
 }else{
-    // Проверяем редирект неверного пароля
+    // Проверяем редирект неверных данных
     var url = window.location.href;
+    var a = document.referrer;
 
-    if(url.indexOf('client_account/session') !== -1){
-        var a = document.referrer;
-        var url_history = 'client_account/session/new?mobile=Y';
+    if (a != '') {
+        if(url.indexOf('client_account/session') !== -1){
+            var url_history = 'client_account/session/new?mobile=Y';
 
-        if (a != '') {
             if(a.indexOf(url_history) !== -1){
-                if($('.co-notice--danger.co-notice--flash').text() == 'Подтвердите, что вы не робот'){
-                    window.location.href = "http://shop-55201.myinsales.ru/client_account/session/new?mobile=Y&error=Подтвердите, что вы не робот";
-                }else if($('.co-notice--danger.co-notice--flash').text() == 'Сочетание логина и пароля не подходит'){
-                    window.location.href = "http://shop-55201.myinsales.ru/client_account/session/new?mobile=Y&error=Сочетание логина и пароля не подходит";
+               if($('.co-notice--danger.co-notice--flash').text() == 'Подтвердите, что вы не робот'){
+                   window.location.href = "http://shop-55201.myinsales.ru/client_account/session/new?mobile=Y&error=Подтвердите, что вы не робот";
+               }else if($('.co-notice--danger.co-notice--flash').text() == 'Сочетание логина и пароля не подходит'){
+                   window.location.href = "http://shop-55201.myinsales.ru/client_account/session/new?mobile=Y&error=Сочетание логина и пароля не подходит";
+               }
+            }else{
+               uploadOn();
+            }
+
+        }else if(url.indexOf('client_account/password/change') !== -1){
+            var url_history = 'client_account/password/change?mobile=Y';
+
+            if(a.indexOf(url_history) !== -1) {
+                if ($('.co-notice--danger.co-notice--flash').text() == 'Неправильный e-mail') {
+                    window.location.href = "http://shop-55201.myinsales.ru/client_account/password/change?mobile=Y&error=Неправильный e-mail";
                 }
             }else{
                 uploadOn();
