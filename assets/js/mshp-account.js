@@ -86,6 +86,16 @@ if(typeof gets['mobile'] !== 'undefined') {
             }else{
                 uploadOn();
             }
+        }else if(url.indexOf('client_account/contacts') !== -1){
+            var url_history = 'client_account/contacts/new?mobile=Y';
+
+            if(a.indexOf(url_history) !== -1) {
+                if ($('.co-notice--danger.co-notice--flash').length) {
+                    window.location.href = "http://shop-55201.myinsales.ru/client_account/contacts/new?mobile=Y&error=" + $('.co-notice--danger.co-notice--flash').html();
+                }
+            }else{
+                uploadOn();
+            }
         }else{
             uploadOn();
         }
