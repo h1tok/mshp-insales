@@ -11,7 +11,7 @@ var gets = (function() {
 
 var uploadOn = (function (){
     window.onload = function () {
-        document.body.classList.add('oaded_hiding');
+        document.body.classList.add('loaded_hiding');
         document.body.classList.add('loaded');
         document.body.classList.remove('loaded_hiding');
     }
@@ -37,26 +37,41 @@ if(typeof gets['mobile'] !== 'undefined') {
         $("a").remove();
 
         var url = window.location.href;
-        if(url.indexOf('client_account/session/new') !== '-1'){
+        var a = document.referrer;
 
-        }else if(url.indexOf('client_account/session') !== '-1'){
+        if (a != '') {
 
+            if(typeof gets['error'] !== 'undefined') {
+                var error = decodeURIComponent(gets["error"]);
+
+                if(error == 'Подтвердите, что вы не робот'){
+                    html = '<script src="https://www.google.com/recaptcha/api.js?hl=ru" async="async" defer="defer"></script>';
+                    html += '<div class="co-input co-input--text co-input--captcha">';
+                    html += '  	<div class="g-recaptcha" data-callback="onReCaptchaSuccess" data-sitekey="6Lc0T0YUAAAAAAVNiH-_bnSC4E-YHMFTeYOqZyRx"></div>';
+                    html += '</div>';
+
+                    $(html).insertBefore('.co-form-controls');
+
+                }
+                $('<div class="co-notice--danger co-notice--flash">' + error + '</div>').insertBefore( ".co-login-form_placeholder.co-checkout-block--padded" );
+            }
         }
-
-        //var a = document.referrer;
-        //alert(new URL(a));
     }
 }else{
     // Проверяем редирект неверного пароля
     var url = window.location.href;
 
-    if(url.indexOf('client_account/session') !== '-1'){
+    if(url.indexOf('client_account/session') !== -1){
         var a = document.referrer;
         var url_history = 'client_account/session/new?mobile=Y';
 
         if (a != '') {
-            if(url_history.indexOf(new URL(a)) !== '-1'){
-                window.location.href = "http://shop-55201.myinsales.ru/client_account/session/new?mobile=Y";
+            if(a.indexOf(url_history) !== -1){
+                if($('.co-notice--danger.co-notice--flash').text() == 'Подтвердите, что вы не робот'){
+                    window.location.href = "http://shop-55201.myinsales.ru/client_account/session/new?mobile=Y&error=Подтвердите, что вы не робот";
+                }else if($('.co-notice--danger.co-notice--flash').text() == 'Сочетание логина и пароля не подходит'){
+                    window.location.href = "http://shop-55201.myinsales.ru/client_account/session/new?mobile=Y&error=Сочетание логина и пароля не подходит";
+                }
             }else{
                 uploadOn();
             }
