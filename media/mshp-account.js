@@ -36,8 +36,25 @@ if(typeof gets['mobile'] !== 'undefined') {
         $(".header-menu-wrapper").parent(".grid__cell.palette_1").remove();
         $("a").remove();
 
+
+
         var url = window.location.href;
         var a = document.referrer;
+
+        if(url.indexOf('client_account/session/new?mobile=Y') !== -1) {
+
+            $('<a href="/client_account/contacts/new?mobile=Y" type="button" class="mshp-registration">Регистрация</a>').insertAfter(".co-button.co-form-button.js-co-login-submit");
+            $('<a href="/client_account/password/change?mobile=Y" class="co-button co-button--link co-form-button mshp-forgotten">Забыли пароль?</a>').insertAfter(".mshp-registration");
+
+            $('.co-button.co-form-button.js-co-login-submit').text('Вход');
+
+            $('.co-button.co-form-button.js-co-login-submit').css({
+                'background': '#fa4324',
+                'width': '45%',
+                'border-radius': '4px'
+            });
+
+        }
 
         if (a != '') {
 
@@ -68,9 +85,9 @@ if(typeof gets['mobile'] !== 'undefined') {
 
             if(a.indexOf(url_history) !== -1){
                if($('.co-notice--danger.co-notice--flash').text() == 'Подтвердите, что вы не робот'){
-                   window.location.href = "http://shop-55201.myinsales.ru/client_account/session/new?mobile=Y&error=Подтвердите, что вы не робот";
+                   window.location.href = "/client_account/session/new?mobile=Y&error=Подтвердите, что вы не робот";
                }else if($('.co-notice--danger.co-notice--flash').text() == 'Сочетание логина и пароля не подходит'){
-                   window.location.href = "http://shop-55201.myinsales.ru/client_account/session/new?mobile=Y&error=Сочетание логина и пароля не подходит";
+                   window.location.href = "/client_account/session/new?mobile=Y&error=Сочетание логина и пароля не подходит";
                }
             }else{
                uploadOn();
@@ -81,7 +98,7 @@ if(typeof gets['mobile'] !== 'undefined') {
 
             if(a.indexOf(url_history) !== -1) {
                 if ($('.co-notice--danger.co-notice--flash').text() == 'Неправильный e-mail') {
-                    window.location.href = "http://shop-55201.myinsales.ru/client_account/password/change?mobile=Y&error=Неправильный e-mail";
+                    window.location.href = "/client_account/password/change?mobile=Y&error=Неправильный e-mail";
                 }
             }else{
                 uploadOn();
@@ -91,7 +108,7 @@ if(typeof gets['mobile'] !== 'undefined') {
 
             if(a.indexOf(url_history) !== -1) {
                 if ($('.co-notice--danger.co-notice--flash').length) {
-                    window.location.href = "http://shop-55201.myinsales.ru/client_account/contacts/new?mobile=Y&error=" + $('.co-notice--danger.co-notice--flash').html();
+                    window.location.href = "/client_account/contacts/new?mobile=Y&error=" + $('.co-notice--danger.co-notice--flash').html();
                 }
             }else{
                 uploadOn();
