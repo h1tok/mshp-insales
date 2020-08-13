@@ -53,7 +53,22 @@ if(typeof gets['mobile'] !== 'undefined') {
                 'width': '45%',
                 'border-radius': '4px'
             });
+        }else if(url.indexOf('client_account/password/change?mobile=Y') !== -1){
+            $('.co-button.co-form-button.js-co-login-submit').css({
+                'background': '#fa4324',
+                'border-radius': '4px'
+            });
+        }else if(url.indexOf('client_account/contacts/new?mobile=Y') !== -1){
+            $('#client_language_id').closest('.co-input.co-input--select.co-input--language.co-input--nested').css('display', 'none');
 
+            $('.co-button.co-form-button.js-co-login-submit').text('Зарегистрироваться');
+
+            $('.co-input-description').css('color', '#fa4324');
+
+            $('.co-button.co-form-button.js-co-login-submit').css({
+                'background': '#fa4324',
+                'border-radius': '4px'
+            });
         }
 
         if (a != '') {
