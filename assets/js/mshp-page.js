@@ -20,7 +20,7 @@ if(typeof gets['mobile'] !== 'undefined'){
         /* Скрываем блоки */
         $(".header-wrapper").remove();
         $(".footer-wrapper").remove();
-        $(".header-menu-wrapper").parent(".grid__cell.palette_1").remove();
+        $(".top-panel-wrapper.hidden-xs").remove();
     }
 }else{
     window.onload = function () {
